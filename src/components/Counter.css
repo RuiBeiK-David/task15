@@ -1,0 +1,77 @@
+.counter {
+  padding: 80px 0;
+  background-image: url('../assets/images/counter.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.counter::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(40, 58, 90, 0.9);
+}
+
+.counter-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.counter-item {
+  flex: 0 1 auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  min-width: auto;
+}
+
+.counter-icon {
+  width: 45px;
+  height: 45px;
+  filter: brightness(0) invert(1);
+}
+
+.counter-text {
+  text-align: left;
+  white-space: nowrap;
+}
+
+.counter-item h3 {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  font-family: "Jost", sans-serif;
+  line-height: 1;
+}
+
+.counter-item p {
+  font-size: 14px;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+@media (max-width: 992px) {
+  .counter-content {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .counter-item {
+    flex: 0 1 auto;
+  }
+} 
